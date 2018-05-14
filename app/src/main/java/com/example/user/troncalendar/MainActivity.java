@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+     DatabaseHelper mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 startNextPage();
             }
         });
+        mydb = new DatabaseHelper(this);
     }
 
     private void startNextPage(){
