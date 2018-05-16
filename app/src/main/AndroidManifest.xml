@@ -18,6 +18,9 @@
         </activity>
         <activity android:name=".course"></activity>
         <activity android:name=".profile"></activity>
+        <activity android:name=".activity"></activity>
+        <activity android:name=".schoolpost"></activity>
+        <activity android:name=".calendar"></activity>
     </application>
 
 </manifest>
