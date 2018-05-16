@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-
+        TextView textView4 = findViewById(R.id.textView4);
         ImageView imageView = findViewById(R.id.imageView6);
         ImageView imageView2 = findViewById(R.id.imageView8);
         ImageView imageView3 = findViewById(R.id.imageView7);
@@ -33,6 +34,9 @@ public class profile extends AppCompatActivity {
                 startNextPage3();
             }
         });
+
+        String title = "個人資料";
+        textView4.setText(title);
     }
 
     private void startNextPage(){

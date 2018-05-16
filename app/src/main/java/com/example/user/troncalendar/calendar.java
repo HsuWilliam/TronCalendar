@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class calendar extends AppCompatActivity {
     static Intent intent = new Intent();
@@ -14,6 +15,7 @@ public class calendar extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageView6);
         ImageView imageView2 = findViewById(R.id.imageView8);
         ImageView imageView3 = findViewById(R.id.imageView9);
+        TextView textView4 = findViewById(R.id.textView4);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +34,8 @@ public class calendar extends AppCompatActivity {
                 startNextPage3();
             }
         });
+        String title = "行事曆";
+        textView4.setText(title);
     }
 
     private void startNextPage(){

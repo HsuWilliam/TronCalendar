@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
+        TextView textView4 = findViewById(R.id.textView4);
         ImageView imageView = findViewById(R.id.imageView6);
         ImageView imageView4 = findViewById(R.id.imageView7);
         ImageView imageView2 = findViewById(R.id.imageView9);
@@ -38,6 +42,8 @@ public class activity extends AppCompatActivity {
                 startNextPage4();
             }
         });
+        String title = "活動";
+        textView4.setText(title);
     }
 
     private void startNextPage(){
