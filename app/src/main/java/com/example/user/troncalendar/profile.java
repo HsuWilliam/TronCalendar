@@ -12,10 +12,13 @@ public class profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-        TextView textView4 = findViewById(R.id.textView4);
+TextView textView4 = findViewById(R.id.textView4);
         ImageView imageView = findViewById(R.id.imageView6);
         ImageView imageView2 = findViewById(R.id.imageView8);
         ImageView imageView3 = findViewById(R.id.imageView7);
+        ImageView imageView4 = findViewById(R.id.imageView12);
+
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +40,13 @@ public class profile extends AppCompatActivity {
 
         String title = "個人資料";
         textView4.setText(title);
+
+        imageView4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                nextPageToLogin();
+            }
+        });
     }
 
     private void startNextPage(){
@@ -53,6 +63,12 @@ public class profile extends AppCompatActivity {
     private void startNextPage3(){
         Intent intent = new Intent();
         intent.setClass(this , calendar.class);
+        startActivity(intent);
+    }
+
+    private void nextPageToLogin(){
+        Intent intent = new Intent();
+        intent.setClass(this, MainActivity.class);
         startActivity(intent);
     }
 }

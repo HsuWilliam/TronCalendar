@@ -37,13 +37,6 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/pic7" />
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/pic8" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -73,10 +66,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.495">
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/linearLayout8"
