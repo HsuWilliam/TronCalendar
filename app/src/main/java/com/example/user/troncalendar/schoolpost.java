@@ -6,13 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-public class course extends AppCompatActivity {
-    @Override
+public class schoolpost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.course);
-        ImageView imageView = findViewById(R.id.imageView9);
-        ImageView imageView2 = findViewById(R.id.imageView8);
+        setContentView(R.layout.schoolpost);
+        ImageView imageView = findViewById(R.id.imageView6);
+        ImageView imageView2 = findViewById(R.id.imageView9);
         ImageView imageView3 = findViewById(R.id.imageView7);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,13 +35,13 @@ public class course extends AppCompatActivity {
 
     private void startNextPage(){
         Intent intent = new Intent();
-        intent.setClass(this , profile.class);
+        intent.setClass(this , course.class);
         startActivity(intent);
     }
 
     private void startNextPage2(){
         Intent intent = new Intent();
-        intent.setClass(this , activity.class);
+        intent.setClass(this , profile.class);
         startActivity(intent);
     }
 
