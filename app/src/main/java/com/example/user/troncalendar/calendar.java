@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class calendar extends AppCompatActivity {
+    static Intent intent = new Intent();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar);
@@ -34,19 +35,16 @@ public class calendar extends AppCompatActivity {
     }
 
     private void startNextPage(){
-        Intent intent = new Intent();
         intent.setClass(this , course.class);
         startActivity(intent);
     }
 
     private void startNextPage2(){
-        Intent intent = new Intent();
         intent.setClass(this , activity.class);
         startActivity(intent);
     }
 
     private void startNextPage3(){
-        Intent intent = new Intent();
         intent.setClass(this , profile.class);
         startActivity(intent);
     }
