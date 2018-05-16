@@ -12,11 +12,24 @@ public class course extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course);
         ImageView imageView = findViewById(R.id.imageView9);
-
+        ImageView imageView2 = findViewById(R.id.imageView8);
+        ImageView imageView3 = findViewById(R.id.imageView7);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startNextPage();
+            }
+        });
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNextPage2();
+            }
+        });
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNextPage3();
             }
         });
     }
@@ -24,6 +37,18 @@ public class course extends AppCompatActivity {
     private void startNextPage(){
         Intent intent = new Intent();
         intent.setClass(this , profile.class);
+        startActivity(intent);
+    }
+
+    private void startNextPage2(){
+        Intent intent = new Intent();
+        intent.setClass(this , activity.class);
+        startActivity(intent);
+    }
+
+    private void startNextPage3(){
+        Intent intent = new Intent();
+        intent.setClass(this , calendar.class);
         startActivity(intent);
     }
 }

@@ -6,19 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-public class profile extends AppCompatActivity {
-    @Override
+public class schoolpost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile);
-
-
+        setContentView(R.layout.schoolpost);
         ImageView imageView = findViewById(R.id.imageView6);
-        ImageView imageView2 = findViewById(R.id.imageView8);
+        ImageView imageView2 = findViewById(R.id.imageView9);
         ImageView imageView3 = findViewById(R.id.imageView7);
-        ImageView imageView4 = findViewById(R.id.imageView12);
-
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,13 +31,6 @@ public class profile extends AppCompatActivity {
                 startNextPage3();
             }
         });
-
-        imageView4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                nextPageToLogin();
-            }
-        });
     }
 
     private void startNextPage(){
@@ -51,21 +38,16 @@ public class profile extends AppCompatActivity {
         intent.setClass(this , course.class);
         startActivity(intent);
     }
+
     private void startNextPage2(){
         Intent intent = new Intent();
-        intent.setClass(this , activity.class);
+        intent.setClass(this , profile.class);
         startActivity(intent);
     }
 
     private void startNextPage3(){
         Intent intent = new Intent();
         intent.setClass(this , calendar.class);
-        startActivity(intent);
-    }
-
-    private void nextPageToLogin(){
-        Intent intent = new Intent();
-        intent.setClass(this, MainActivity.class);
         startActivity(intent);
     }
 }
