@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         });
         mydb = new DatabaseHelper(this);
     }
-
+//this is a test
     private void startNextPage(){
         Intent intent = new Intent();
         intent.setClass(this , course.class);
