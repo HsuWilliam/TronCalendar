@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_course"
+        android:icon="@drawable/classes"
+        android:title="@string/nav_course" />
+    <item
+        android:id="@+id/nav_calendar"
+        android:icon="@drawable/calendar"
+        android:title="@string/nav_calendar" />
+
+    <item
+        android:id="@+id/nav_activities"
+        android:icon="@drawable/activity"
+        android:title="@string/nav_activities" />
+</menu>
