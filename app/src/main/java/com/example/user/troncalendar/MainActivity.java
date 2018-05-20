@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 //this is a test
     private void startNextPage(){
         Intent intent = new Intent();
-        intent.setClass(this , course.class);
+        intent.setClass(this , profile.class);
         startActivity(intent);
     }
 
