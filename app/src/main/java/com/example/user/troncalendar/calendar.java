@@ -16,6 +16,7 @@ public class calendar extends AppCompatActivity {
         ImageView imageView2 = findViewById(R.id.imageView8);
         ImageView imageView3 = findViewById(R.id.imageView9);
         TextView textView4 = findViewById(R.id.textView4);
+        ImageView imageView1 = findViewById(R.id.imageView15);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +35,12 @@ public class calendar extends AppCompatActivity {
                 startNextPage3();
             }
         });
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNextPage4();
+            }
+        });
         String title = "行事曆";
         textView4.setText(title);
     }
@@ -50,6 +57,11 @@ public class calendar extends AppCompatActivity {
 
     private void startNextPage3(){
         intent.setClass(this , profile.class);
+        startActivity(intent);
+    }
+
+    private void startNextPage4(){
+        intent.setClass(this , addevent.class);
         startActivity(intent);
     }
 }
