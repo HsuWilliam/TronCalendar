@@ -15,11 +15,8 @@ import org.w3c.dom.Text;
 
 public class course extends AppCompatActivity {
     private BottomNavigationView courseNav;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course);
         courseNav = (BottomNavigationView) findViewById(R.id.course_nav);
@@ -33,37 +30,15 @@ public class course extends AppCompatActivity {
                     case R.id.nav_calendar:
                         startNextPage3();
                         return true;
-                    case R.id.nav_course:
+                    case R.id.nav_profile:
+                        startNextPage();
                         return true;
-
                     default:
                         return false;
-                        
                 }
             }
         });
         TextView textView4 = findViewById(R.id.textView4);
-//        ImageView imageView = findViewById(R.id.imageView9);
-//        ImageView imageView2 = findViewById(R.id.imageView8);
-//        ImageView imageView3 = findViewById(R.id.imageView7);
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startNextPage();
-//            }
-//        });
-//        imageView2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startNextPage2();
-//            }
-//        });
-//        imageView3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startNextPage3();
-//            }
-//        });
         String title = "課程";
         textView4.setText(title);
     }
