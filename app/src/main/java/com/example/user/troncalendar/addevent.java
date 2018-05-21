@@ -50,7 +50,7 @@ public class addevent extends AppCompatActivity {
         //        textTime.setText((hourOfDay > 12 ? hourOfDay - 12 : hourOfDay) + ":"
         //         + minute + ":" + (hourOfDay > 12 ? "PM" : "AM"));
         //    }
-        //}, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false);
+        //}, calenda    r.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false);
         datePickerDialog2 = new DatePickerDialog(this, new OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
