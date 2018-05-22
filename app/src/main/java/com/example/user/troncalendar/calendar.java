@@ -45,7 +45,7 @@ public class calendar extends AppCompatActivity {
                 startNextPage4();
             }
         });
-        TextView textView4 = findViewById(R.id.textView4);
+        textView4 = findViewById(R.id.textView4);
         String title = "行事曆";
         textView4.setText(title);
     }
