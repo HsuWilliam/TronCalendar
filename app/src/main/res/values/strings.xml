@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name"></string>
     <string name="courses">我的課程</string>
+    <string name="nav_me">me</string>
+    <string name="nav_activities">activities</string>
+    <string name="nav_course">course</string>
+    <string name="nav_calendar">calendar</string>
+    <string name="nav_profile">profile</string>
 </resources>
