@@ -6,8 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class calendar extends AppCompatActivity {
@@ -16,10 +14,9 @@ public class calendar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar);
-        TextView textView4 = findViewById(R.id.textView4);
-        ImageView imageView1 = findViewById(R.id.imageView15);
-        cal_nav = findViewById(R.id.cal_nav);
+        cal_nav = (BottomNavigationView) findViewById(R.id.cal_nav);
         cal_nav.setSelectedItemId(R.id.nav_calendar);
+
         cal_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -39,12 +36,7 @@ public class calendar extends AppCompatActivity {
                 }
             }
         });
-        imageView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startNextPage4();
-            }
-        });
+        TextView textView4 = findViewById(R.id.textView4);
         String title = "行事曆";
         textView4.setText(title);
     }
@@ -61,11 +53,6 @@ public class calendar extends AppCompatActivity {
 
     private void startNextPage3(){
         intent.setClass(this , profile.class);
-        startActivity(intent);
-    }
-
-    private void startNextPage4(){
-        intent.setClass(this , addevent.class);
         startActivity(intent);
     }
 }
