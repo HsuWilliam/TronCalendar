@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#33ccff</color>
-    <color name="colorPrimaryDark">#33ccff</color>
+    <color name="colorPrimary">#4747d1</color>
+    <color name="colorPrimaryDark">#4747d1</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="navBarColor">#FF4099</color>
+    <color name="white">#ffffff</color>
+
+
+    <color name="orange1">#ff8000</color> //course
+    <color name="brown">#996633</color> //activity
+    <color name="purple">#8600b3</color> //profile
+    <color name="pink">#ff338a</color> //calendar
+
+
 </resources>

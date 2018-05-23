@@ -9,10 +9,11 @@
         android:id="@+id/cal_nav"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
-
+        app:itemBackground="@color/pink"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-
         android:layout_alignParentStart="true"
         app:menu="@menu/nav_items"></android.support.design.widget.BottomNavigationView>
 
@@ -20,7 +21,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:background="#33ccff"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +36,7 @@
             android:paddingTop="20px"
             android:text="行事曆"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="24sp" />
 
         <ImageView

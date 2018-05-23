@@ -14,27 +14,27 @@ public class schoolpost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.schoolpost);
         TextView textView4 = findViewById(R.id.textView4);
-        ImageView imageView = findViewById(R.id.imageView6);
-        ImageView imageView2 = findViewById(R.id.imageView9);
-        ImageView imageView3 = findViewById(R.id.imageView7);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startNextPage();
-            }
-        });
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startNextPage2();
-            }
-        });
-        imageView3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startNextPage3();
-            }
-        });
+//        ImageView imageView = findViewById(R.id.imageView6);
+//        ImageView imageView2 = findViewById(R.id.imageView9);
+//        ImageView imageView3 = findViewById(R.id.imageView7);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startNextPage();
+//            }
+//        });
+//        imageView2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startNextPage2();
+//            }
+//        });
+//        imageView3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startNextPage3();
+//            }
+//        });
         String title = "活動";
         textView4.setText(title);
     }

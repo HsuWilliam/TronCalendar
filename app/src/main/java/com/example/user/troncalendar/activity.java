@@ -20,6 +20,13 @@ public class activity extends AppCompatActivity {
         TextView textView4 = findViewById(R.id.textView4);
         activity_nav = findViewById(R.id.activity_nav);
         activity_nav.setSelectedItemId(R.id.nav_activities);
+        ImageView imageView13 = findViewById(R.id.imageView13);
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNextPage3();
+            }
+        });
 
         activity_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
