@@ -6,23 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".course">
 
-
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/course_nav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-
         android:layout_alignParentStart="true"
+        app:itemBackground="@color/orange1"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:menu="@menu/nav_items"></android.support.design.widget.BottomNavigationView>
 
     <LinearLayout
+
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:background="#33ccff"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
         <TextView
@@ -31,9 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="20px"
-            android:text="課程"
+            android:text="@string/courses"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="24sp" />
     </LinearLayout>
 
