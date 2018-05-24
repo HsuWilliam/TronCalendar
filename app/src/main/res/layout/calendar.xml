@@ -34,7 +34,7 @@
             android:layout_marginLeft="110px"
             android:layout_weight="1"
             android:paddingTop="20px"
-            android:text="行事曆"
+            android:text="@string/calendarTitle"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25px"
             android:layout_weight="1"
+            android:contentDescription="@string/calendarAddEventButton"
             app:srcCompat="@android:drawable/ic_input_add" />
     </LinearLayout>
 
@@ -53,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="438dp"
         android:layout_centerVertical="true"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

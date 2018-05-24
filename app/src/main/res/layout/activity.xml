@@ -22,7 +22,7 @@
             android:layout_marginLeft="110px"
             android:layout_weight="1"
             android:paddingTop="20px"
-            android:text="活動"
+            android:text="@string/activityTitle"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp" />

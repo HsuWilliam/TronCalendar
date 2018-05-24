@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="20px"
-            android:text="課程"
+            android:text="@string/course2Title"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
@@ -87,7 +87,6 @@
         android:layout_marginRight="40dp"
         android:layout_marginStart="240dp"
         android:layout_marginTop="96dp"
-        android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
