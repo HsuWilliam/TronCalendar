@@ -6,6 +6,7 @@
     <color name="colorRed">#FF0000</color>
     <color name="navBarColor">#FF4099</color>
     <color name="white">#ffffff</color>
+    <color name="greyWhite">#f4f6f6</color>
 
 
     <color name="orange1">#ff8000</color> //course
