@@ -16,12 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".course"></activity>
-        <activity android:name=".profile"></activity>
-        <activity android:name=".activity"></activity>
-        <activity android:name=".schoolpost"></activity>
-        <activity android:name=".calendar"></activity>
-        <activity android:name=".addevent"></activity>
+        <activity android:name=".course" />
+        <activity android:name=".profile" />
+        <activity android:name=".activity" />
+        <activity android:name=".schoolpost" />
+        <activity android:name=".calendar" />
+        <activity android:name=".addevent" />
+        <activity android:name=".course1"/>
+        <activity android:name=".course2"/>
+        <activity android:name=".course3"/>
+        <activity android:name=".course4"></activity>
+
+
     </application>
 
 </manifest>

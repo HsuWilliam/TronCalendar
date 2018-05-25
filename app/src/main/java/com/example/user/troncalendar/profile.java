@@ -12,11 +12,21 @@ import android.widget.TextView;
 
 public class profile extends AppCompatActivity {
     private BottomNavigationView pro_nav;
+    ImageView signOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
         pro_nav = findViewById(R.id.pro_nav);
+        signOut = findViewById(R.id.imageView9);
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToSignIn();
+            }
+        });
         TextView textView4 = findViewById(R.id.textView4);
         pro_nav.setSelectedItemId(R.id.nav_profile);
         pro_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,7 +55,7 @@ public class profile extends AppCompatActivity {
         String title = "個人資料";
         textView4.setText(title);
 
-//        imageView4.setOnClickListener(new View.OnClickListener(){
+//        imageView9.setOnClickListener(new View.OnClickListener(){
 //            @Override
 //            public void onClick(View v){
 //                nextPageToLogin();
@@ -56,6 +66,12 @@ public class profile extends AppCompatActivity {
     private void startNextPage(){
         Intent intent = new Intent();
         intent.setClass(this , course.class);
+        startActivity(intent);
+    }
+
+    private void goToSignIn(){
+        Intent intent = new Intent();
+        intent.setClass(this, MainActivity.class);
         startActivity(intent);
     }
     private void startNextPage2(){
@@ -76,3 +92,4 @@ public class profile extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
