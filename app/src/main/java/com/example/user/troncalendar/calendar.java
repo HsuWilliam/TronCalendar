@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,14 @@ public class calendar extends AppCompatActivity {
         imageView15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addEvent();
+                calendartest();
+            }
+        });
+        CalendarView calendarView = findViewById(R.id.calendarView);
+        calendarView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calendartest();
             }
         });
         cal_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,8 +59,13 @@ public class calendar extends AppCompatActivity {
     private void addEvent(){
         intent.setClass(this, addevent.class);
         startActivity(intent);
-
     }
+
+    private void calendartest() {
+        intent.setClass(this, calendartest.class);
+        startActivity(intent);
+    }
+
     private void startNextPage(){
         intent.setClass(this ,course.class);
         startActivity(intent);
