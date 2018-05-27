@@ -67,6 +67,20 @@
                 android:id="@+id/calendarView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
+
+            <Button
+                android:id="@+id/mCallApiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16px"
+                android:text="@string/buttonText" />
+
+            <TextView
+                android:id="@+id/mOutputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16px"
+                android:text="TextView" />
         </LinearLayout>
     </ScrollView>
 
