@@ -115,8 +115,9 @@ public class activity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ViewFragment1(), "Title 1");
-        adapter.addFragment(new ViewFragment2(), "Title 2");
+        adapter.addFragment(new ViewFragment1(), "學校與系上活動");
+        adapter.addFragment(new ViewFragment2(), "系學會");
+        adapter.addFragment(new ViewFragment3(), "社團");
 
         viewPager.setAdapter(adapter);
     }
