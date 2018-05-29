@@ -16,7 +16,9 @@
         app:itemBackground="@color/orange1"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        app:menu="@menu/nav_items"></android.support.design.widget.BottomNavigationView>
+        app:menu="@menu/nav_items">
+
+    </android.support.design.widget.BottomNavigationView>
 
     <LinearLayout
 
@@ -36,6 +38,30 @@
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
+
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:layout_weight="1"
+                android:text="確定新增"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="356dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

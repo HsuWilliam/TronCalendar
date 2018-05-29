@@ -22,6 +22,9 @@
         <activity android:name=".schoolpost"></activity>
         <activity android:name=".calendar"></activity>
         <activity android:name=".addevent"></activity>
+        <activity android:name=".course2"></activity>
+        <activity android:name=".coursepost1"></activity>
+        <activity android:name=".coursepost2"></activity>
     </application>
 
 </manifest>
