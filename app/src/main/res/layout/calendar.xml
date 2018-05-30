@@ -52,9 +52,10 @@
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="438dp"
         android:layout_centerVertical="true"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        android:layout_height="450dp"
+        android:layout_below="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +70,20 @@
                 android:id="@+id/calendarView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
+
+            <Button
+                android:id="@+id/mCallApiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16px"
+                android:text="@string/buttonText" />
+
+            <TextView
+                android:id="@+id/mOutputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16px"
+                android:text="TextView" />
         </LinearLayout>
     </ScrollView>
 

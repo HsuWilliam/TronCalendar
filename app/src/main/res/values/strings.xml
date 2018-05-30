@@ -12,6 +12,10 @@
     <string name="nav_calendar">calendar</string>
     <string name="nav_profile">profile</string>
 
+    <string name="buttonText">Call Google Calendar API</string>
+    <string name="schoolbutton">學校與系上活動</string>
+    <string name="button">系學會</string>
+    <string name="clubbutton">社團</string>
 
     // addEvent
     <string name="addEventTitle">標題</string>
