@@ -25,6 +25,8 @@
         <activity android:name=".course2"></activity>
         <activity android:name=".coursepost1"></activity>
         <activity android:name=".coursepost2"></activity>
+        <activity android:name=".homework1"></activity>
+        <activity android:name=".homework2"></activity>
     </application>
 
 </manifest>

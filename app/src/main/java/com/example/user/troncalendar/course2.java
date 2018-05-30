@@ -22,6 +22,13 @@ public class course2 extends AppCompatActivity {
                 startNextPage();
             }
         });
+        ImageView imageView4 = findViewById(R.id.imageView4);
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNextPage2();
+            }
+        });
         //course
         TextView textView4 = findViewById(R.id.textView4);
         String title = "課程";
@@ -30,6 +37,12 @@ public class course2 extends AppCompatActivity {
     private void startNextPage(){
         Intent intent = new Intent();
         intent.setClass(this , coursepost1.class);
+        startActivity(intent);
+    }
+
+    private void startNextPage2(){
+        Intent intent = new Intent();
+        intent.setClass(this , homework1.class);
         startActivity(intent);
     }
 }

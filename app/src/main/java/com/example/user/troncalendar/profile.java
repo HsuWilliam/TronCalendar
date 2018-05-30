@@ -16,7 +16,7 @@ public class profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-        pro_nav = findViewById(R.id.pro_nav);
+        pro_nav = findViewById(R.id.nav_profile);
         TextView textView4 = findViewById(R.id.textView4);
         pro_nav.setSelectedItemId(R.id.nav_profile);
         pro_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
