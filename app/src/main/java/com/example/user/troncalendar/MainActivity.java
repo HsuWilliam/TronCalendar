@@ -1,7 +1,9 @@
 package com.example.user.troncalendar;
 
+
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +11,17 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.user.troncalendar.R;
+import com.example.user.troncalendar.course;
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.database.ValueEventListener;
 
 
 //test
@@ -28,37 +37,6 @@ public class MainActivity extends AppCompatActivity {
         studentnumber = (EditText) this.findViewById(R.id.studentnumber);
         pass = (EditText) this.findViewById(R.id.password);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String[] account = {"405402340", "405402508","405402223","405402314","405402089",""};
-                String[] password = {"405402340", "405402508","405402223","405402314","405402089",""};
-                for (int i = 0; i < account.length; i++) {
-                    if (studentnumber.getText().toString().equals(account[i]) && pass.getText().toString().equals(password[i])) {
-                        new AlertDialog.Builder(MainActivity.this).setTitle("登入訊息").setIcon(R.mipmap.ic_launcher).setMessage("登入成功").setPositiveButton("確認"
-                                , new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent();
-                                        intent.setClass(MainActivity.this,course.class);
-                                        startActivity(intent);
-                                    }
-                                }).show();
-                        break;
-                    } else {
-                        new AlertDialog.Builder(MainActivity.this).setTitle("登入訊息").setIcon(R.mipmap.ic_launcher).setMessage("密碼錯誤").setPositiveButton("返回"
-                                , new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent();
-                                        intent.setClass(MainActivity.this,MainActivity.class);
-                                        startActivity(intent);
-                                    }
-                                }).show();
-
-                    }
-                }
-            }
-        });
                                       @Override
                                       public void onClick(View v) {
                                           if (studentnumber.getText().toString().equals("405402340") && pass.getText().toString().equals("405402340") || studentnumber.getText().toString().equals("405402508") && pass.getText().toString().equals("405402508")
