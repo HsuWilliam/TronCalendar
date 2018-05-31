@@ -5,6 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/mCallApiButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16px"
+        android:layout_below="@id/calendarView"
+        android:text="@string/buttonText" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/linearLayout4"/>
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/cal_nav"
         android:layout_width="wrap_content"
@@ -55,7 +69,8 @@
         android:layout_centerVertical="true"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         android:layout_height="450dp"
-        android:layout_below="@+id/linearLayout4"
+        android:layout_below="@+id/mCallApiButton"
+        android:layout_above="@id/cal_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,24 +81,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="300dp" />
-
-            <Button
-                android:id="@+id/mCallApiButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16px"
-                android:text="@string/buttonText" />
-
             <TextView
                 android:id="@+id/mOutputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16px"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
 

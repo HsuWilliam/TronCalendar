@@ -2,17 +2,19 @@ package com.example.user.troncalendar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageView;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class schoolpost extends AppCompatActivity {
+    private BottomNavigationView activity_nav;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.schoolpost);
+        activity_nav = findViewById(R.id.activity_nav);
+        activity_nav.setSelectedItemId(R.id.nav_activities);
         TextView textView4 = findViewById(R.id.textView4);
 //        ImageView imageView = findViewById(R.id.imageView6);
 //        ImageView imageView2 = findViewById(R.id.imageView9);
@@ -35,8 +37,26 @@ public class schoolpost extends AppCompatActivity {
 //                startNextPage3();
 //            }
 //        });
-        String title = "活動";
-        textView4.setText(title);
+
+        activity_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_calendar :
+                        startNextPage4();
+                        return true;
+                    case R.id.nav_profile:
+                        startNextPage2();
+                        return true;
+                    case R.id.nav_course:
+                        startNextPage();
+                        return true;
+                    default:
+                        return false;
+                }
+
+            }
+        });
     }
 
     private void startNextPage(){
@@ -51,7 +71,7 @@ public class schoolpost extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void startNextPage3(){
+    private void startNextPage4(){
         Intent intent = new Intent();
         intent.setClass(this , calendar.class);
         startActivity(intent);
