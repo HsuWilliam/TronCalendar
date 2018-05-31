@@ -20,7 +20,7 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
         pro_nav = findViewById(R.id.pro_nav);
-        signOut = findViewById(R.id.imageView9);
+        signOut = findViewById(R.id.imageView12);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

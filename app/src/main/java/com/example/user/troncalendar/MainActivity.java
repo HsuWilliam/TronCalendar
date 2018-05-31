@@ -2,15 +2,12 @@ package com.example.user.troncalendar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 //test
@@ -28,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] account = {"405402340", "405402508","405402223","405402314","405402089"};
-                String[] password = {"405402340", "405402508","405402223","405402314","405402089"};
+                String[] account = {"405402340", "405402508","405402223","405402314","405402089",""};
+                String[] password = {"405402340", "405402508","405402223","405402314","405402089",""};
                 for (int i = 0; i < account.length; i++) {
                     if (studentnumber.getText().toString().equals(account[i]) && pass.getText().toString().equals(password[i])) {
                         new AlertDialog.Builder(MainActivity.this).setTitle("登入訊息").setIcon(R.mipmap.ic_launcher).setMessage("登入成功").setPositiveButton("確認"

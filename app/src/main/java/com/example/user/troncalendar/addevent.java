@@ -1,20 +1,19 @@
 package com.example.user.troncalendar;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
-import android.app.TimePickerDialog;
-import android.app.TimePickerDialog.OnTimeSetListener;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
-import java.time.Month;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -29,11 +28,35 @@ public class addevent extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private DatePickerDialog datePickerDialog2;
     //private TimePickerDialog timePickerDialog;
+    private BottomNavigationView cal_nav;
+    static Intent intent = new Intent();
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.addevent);
+        cal_nav = findViewById(R.id.cal_nav);
+        cal_nav.setSelectedItemId(R.id.nav_calendar);
+        cal_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_activities :
+                        startNextPage2();
+                        return true;
+                    case R.id.nav_profile:
+                        startNextPage3();
+                        return true;
+                    case R.id.nav_course:
+                        startNextPage();
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+
+
         doFindView();
         GregorianCalendar calendar = new GregorianCalendar();
 
@@ -91,5 +114,18 @@ public class addevent extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startNextPage(){
+        intent.setClass(this ,course.class);
+        startActivity(intent);
+    }
+    private void startNextPage2(){
+        intent.setClass(this , activity.class);
+        startActivity(intent);
+    }
+    private void startNextPage3(){
+        intent.setClass(this , profile.class);
+        startActivity(intent);
     }
 }
