@@ -8,7 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.database.ValueEventListener;
 
 public class course extends AppCompatActivity {
     private BottomNavigationView courseNav;
@@ -21,7 +29,26 @@ public class course extends AppCompatActivity {
         cardView2 = findViewById(R.id.cardView2);
         cardView3 = findViewById(R.id.cardView3);
         cardView4 = findViewById(R.id.cardView4);
-        cardView1.setOnClickListener(new View.OnClickListener() {
+//        ListView listView = (ListView)findViewById(R.id.list);
+//        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1);//使用ListAdapter來顯示你輸入的文字
+//        listView.setAdapter(adapter);//將ListAdapter設定至ListView裡面
+//        DatabaseReference reference  = FirebaseDatabase.getInstance().getReference("課程");
+//        reference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                adapter.clear();
+//                for(DataSnapshot ds: dataSnapshot.getChildren()){
+//                    adapter.add(ds.child("名稱").getValue().toString());
+//                }
+//
+//            }
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+
+       cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToCard1();
