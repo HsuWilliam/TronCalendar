@@ -14,11 +14,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 //test
@@ -34,29 +29,29 @@ public class MainActivity extends AppCompatActivity {
         studentnumber = (EditText) this.findViewById(R.id.studentnumber);
         pass = (EditText) this.findViewById(R.id.password);
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (studentnumber.getText().toString().equals("405402340") && pass.getText().toString().equals("405402340") || studentnumber.getText().toString().equals("405402508") && pass.getText().toString().equals("405402508")
-                        ||studentnumber.getText().toString().equals("405402314") && pass.getText().toString().equals("405402314") || studentnumber.getText().toString().equals("405402089") && pass.getText().toString().equals("405402089")
-                        || studentnumber.getText().toString().equals("405402223") && pass.getText().toString().equals("405402223")) {
-                    Intent intent = new Intent();
-                    intent.setClass(MainActivity.this, course.class);
-                    startActivity(intent);
+                                      @Override
+                                      public void onClick(View v) {
+                                          if (studentnumber.getText().toString().equals("405402340") && pass.getText().toString().equals("405402340") || studentnumber.getText().toString().equals("405402508") && pass.getText().toString().equals("405402508")
+                                                  ||studentnumber.getText().toString().equals("405402314") && pass.getText().toString().equals("405402314") || studentnumber.getText().toString().equals("405402089") && pass.getText().toString().equals("405402089")
+                                                  || studentnumber.getText().toString().equals("405402223") && pass.getText().toString().equals("405402223")) {
+                                              Intent intent = new Intent();
+                                              intent.setClass(MainActivity.this, course.class);
+                                              startActivity(intent);
 
-                }else{
-                    new AlertDialog.Builder(MainActivity.this).setTitle("登入訊息").setIcon(R.mipmap.ic_launcher).setMessage("密碼錯誤").setPositiveButton("返回"
-                                , new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent();
-                                        intent.setClass(MainActivity.this,MainActivity.class);
-                                        startActivity(intent);
-                                    }
-                                }).show();
+                                          }else{
+                                              new AlertDialog.Builder(MainActivity.this).setTitle("登入訊息").setIcon(R.mipmap.ic_launcher).setMessage("密碼錯誤").setPositiveButton("返回"
+                                                      , new DialogInterface.OnClickListener() {
+                                                          @Override
+                                                          public void onClick(DialogInterface dialog, int which) {
+                                                              Intent intent = new Intent();
+                                                              intent.setClass(MainActivity.this,MainActivity.class);
+                                                              startActivity(intent);
+                                                          }
+                                                      }).show();
 
-                    }
-                }
-            }
+                                          }
+                                      }
+                                  }
         );
     }
 
@@ -86,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
     //   }
 
     //}
-  // private void startNewPage(){
-      //  Intent intent = new Intent();
-     //   intent.setClass(this , course.class);
-     //   startActivity(intent);
- //   }
+    // private void startNewPage(){
+    //  Intent intent = new Intent();
+    //   intent.setClass(this , course.class);
+    //   startActivity(intent);
+    //   }
 }
