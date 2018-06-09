@@ -58,7 +58,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="ID"
-        android:inputType="number"
+        android:inputType="textEmailAddress|textVisiblePassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

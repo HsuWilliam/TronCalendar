@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class profile extends AppCompatActivity {
     private BottomNavigationView pro_nav;
     ImageView signOut;
@@ -33,6 +35,8 @@ public class profile extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
+
+
                     case R.id.nav_calendar :
                         startNextPage3();
                         return true;
@@ -70,6 +74,8 @@ public class profile extends AppCompatActivity {
     }
 
     private void goToSignIn(){
+        FirebaseAuth.getInstance().signOut();
+        finish();
         Intent intent = new Intent();
         intent.setClass(this, MainActivity.class);
         startActivity(intent);

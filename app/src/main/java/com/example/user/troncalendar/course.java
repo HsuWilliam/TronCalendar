@@ -167,18 +167,32 @@ public class course extends AppCompatActivity {
         FirebaseRecyclerAdapter<courselist,courseViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<courselist, courseViewHolder>
                 (courselist.class,R.layout.course_row,courseViewHolder.class,mDatabase) {
             @Override
-            protected void populateViewHolder(courseViewHolder viewHolder, courselist model, int position) {
+            protected void populateViewHolder(courseViewHolder viewHolder, courselist model, final int position) {
                 viewHolder.setName(model.getName());
                 viewHolder.setTeachername(model.getTeachername());
                 viewHolder.setImage(getApplicationContext(),model.getImage());
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent();
-                        intent.setClass(course.this,course1.class);
-                        startActivity(intent);
+                       if(position==0){
+                           Intent intent = new Intent();
+                           intent.setClass(course.this,course1.class);
+                           startActivity(intent);
+                       }else if(position==1){
+                           Intent intent = new Intent();
+                           intent.setClass(course.this,course2.class);
+                           startActivity(intent);
+                       }else if(position==2){
+                           Intent intent = new Intent();
+                           intent.setClass(course.this,course3.class);
+                           startActivity(intent);
+                       }else if(position==3){
+                           Intent intent = new Intent();
+                           intent.setClass(course.this,course4.class);
+                           startActivity(intent);
+                       }
                     }
-                });
+            });
             }
         };
         mCourse.setAdapter(firebaseRecyclerAdapter);
