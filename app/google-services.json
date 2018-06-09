@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "466328963119",
+    "firebase_url": "https://troncalendar-4e14a.firebaseio.com",
+    "project_id": "troncalendar-4e14a",
+    "storage_bucket": "troncalendar-4e14a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466328963119:android:9f78780742c7df66",
+        "android_client_info": {
+          "package_name": "com.example.user.troncalendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466328963119-mt0r01dim4l8cudv9akh7g7jh9mhau82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.troncalendar",
+            "certificate_hash": "7d5b5453be928af8d919999a422db5166c3a2d2a"
+          }
+        },
+        {
+          "client_id": "466328963119-p0jfcvoiqq56aoou3ph66it8gf8ab10p.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "466328963119-p0jfcvoiqq56aoou3ph66it8gf8ab10p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUXzOUNugv72W07ARbuwmDDXgT3KSpPws"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466328963119-p0jfcvoiqq56aoou3ph66it8gf8ab10p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
