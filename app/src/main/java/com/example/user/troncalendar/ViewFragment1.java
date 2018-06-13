@@ -1,48 +1,73 @@
 package com.example.user.troncalendar;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
+
 public class ViewFragment1 extends Fragment {
+    private RecyclerView mActivity1;
+    private DatabaseReference mDatabase;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        TextView textView2 = (TextView) rootView.findViewById(R.id.txt_label2);
-        TextView textView3 = (TextView) rootView.findViewById(R.id.txt_label3);
-        TextView textView5 = (TextView) rootView.findViewById(R.id.txt_label5);
-
-        textView2.setText("名稱：106學年度第2學期珍愛生命守門人培課課程");
-        textView3.setText("類型：健康促進");
-        textView5.setText("主辦單位：學生輔導中心");
-
-        TextView textView6 = (TextView) rootView.findViewById(R.id.txt_label6);
-        TextView textView7 = (TextView) rootView.findViewById(R.id.txt_label7);
-        TextView textView9 = (TextView) rootView.findViewById(R.id.txt_label9);
-
-        textView6.setText("名稱：像青鳥一樣──走出屬於自己的路");
-        textView7.setText("類型：職涯發展");
-        textView9.setText("主辦單位：(日) 應用中文學分學程");
-
-        TextView textView10 = (TextView) rootView.findViewById(R.id.txt_label10);
-        TextView textView11 = (TextView) rootView.findViewById(R.id.txt_label11);
-        TextView textView12 = (TextView) rootView.findViewById(R.id.txt_label12);
-
-        textView10.setText("名稱：1062學年度資管系期末程式語言機測");
-        textView11.setText("類型：自我成長");
-        textView12.setText("主辦單位：(日) 資訊管理學系");
-
-        TextView textView13 = (TextView) rootView.findViewById(R.id.txt_label13);
-        TextView textView14 = (TextView) rootView.findViewById(R.id.txt_label14);
-        TextView textView15 = (TextView) rootView.findViewById(R.id.txt_label15);
-
-        textView13.setText("名稱：管理學院企業參訪");
-        textView14.setText("類型：職涯發展");
-        textView15.setText("主辦單位：管理學院");
-
+        mDatabase = FirebaseDatabase.getInstance().getReference("公告");
+        mDatabase.keepSynced(true);
+        mActivity1 = (RecyclerView) rootView.findViewById(R.id.recyclerview3);
+        mActivity1.setLayoutManager(new LinearLayoutManager(getContext()));
+        mActivity1.setHasFixedSize(true);
         return rootView;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<activity1list,activityViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<activity1list, activityViewHolder>
+                (activity1list.class,R.layout.activity1_row,activityViewHolder.class,mDatabase) {
+            @Override
+            protected void populateViewHolder(activityViewHolder viewHolder, activity1list model, int position) {
+                viewHolder.setName(model.getName());
+                viewHolder.setOrganization(model.getOrganization());
+                viewHolder.setType(model.getType());
+            }
+        };
+        mActivity1.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    public static class activityViewHolder extends RecyclerView.ViewHolder{
+        View mView;
+        public activityViewHolder(View itemView){
+            super(itemView);
+            mView= itemView;
+        }
+        public void setName(String name){
+            TextView post_activity = (TextView)mView.findViewById(R.id.post_activity);
+            post_activity.setText(name);
+        }
+
+        public void setOrganization(String organization){
+            TextView post_activityorg = (TextView)mView.findViewById(R.id.post_activityorg);
+            post_activityorg.setText(organization);
+        }
+        public void setType(String type){
+            TextView post_activitytype = (TextView)mView.findViewById(R.id.post_activitytype);
+            post_activitytype.setText(type);
+        }
     }
 }
