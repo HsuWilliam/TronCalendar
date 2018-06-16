@@ -39,6 +39,15 @@ public class activity extends AppCompatActivity {
         activity_nav = findViewById(R.id.activity_nav);
         activity_nav.setSelectedItemId(R.id.nav_activities);
         ImageView imageView13 = findViewById(R.id.imageView13);
+        ImageView imageView15 = findViewById(R.id.imageView15);
+        imageView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(activity.this,increase_activity.class);
+                startActivity(intent);
+            }
+        });
         imageView13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
