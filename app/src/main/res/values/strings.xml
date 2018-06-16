@@ -52,5 +52,6 @@
     //schoolPost
     <string name="schoolPostTitle">最新公告</string>
 
-
+    //increase_activity
+    <string name="activitytime">活動時間</string>
 </resources>
