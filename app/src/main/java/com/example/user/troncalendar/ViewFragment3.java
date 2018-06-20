@@ -39,9 +39,8 @@ public class ViewFragment3 extends Fragment {
             @Override
             protected void populateViewHolder(activityViewHolder3 viewHolder, activitylist3 model, int position) {
                 viewHolder.setTitle(model.getTitle());
-                viewHolder.setClub(model.getClub());
                 viewHolder.setTime(model.getTime());
-                viewHolder.setImage(getContext().getApplicationContext(),model.getImage());
+                viewHolder.setContent(model.getContent());
             }
         };
         mActivity3.setAdapter(firebaseRecyclerAdapter);
@@ -57,18 +56,14 @@ public class ViewFragment3 extends Fragment {
             TextView post_activity3 = (TextView)mView.findViewById(R.id.post_activity3);
             post_activity3.setText(title);
         }
-
-        public void setClub(String club){
-            TextView post_activityclub = (TextView)mView.findViewById(R.id.post_activityclub);
-            post_activityclub.setText(club);
-        }
         public void setTime(String time){
             TextView post_activitytime = (TextView)mView.findViewById(R.id.post_activitytime);
             post_activitytime.setText(time);
         }
-        public void setImage(Context ctx, String image){
-            ImageView post_image3 = (ImageView)mView.findViewById(R.id.post_image3);
-            Picasso.with(ctx).load(image).into(post_image3);
+        public void setContent(String content){
+            TextView post_content2 = (TextView)mView.findViewById(R.id.post_content2);
+            post_content2.setText(content);
         }
+
     }
 }

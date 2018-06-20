@@ -40,7 +40,8 @@ public class ViewFragment2 extends Fragment
             protected void populateViewHolder(activityViewHolder2 viewHolder, activitylist2 model, int position) {
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setTime(model.getTime());
-                viewHolder.setImage(getContext().getApplicationContext(),model.getImage());
+                viewHolder.setContent(model.getContent());
+
             }
         };
         mActivity2.setAdapter(firebaseRecyclerAdapter);
@@ -61,9 +62,10 @@ public class ViewFragment2 extends Fragment
             TextView post_activityorg = (TextView)mView.findViewById(R.id.post_activitytime);
             post_activityorg.setText(time);
         }
-        public void setImage(Context ctx, String image){
-            ImageView post_image2 = (ImageView)mView.findViewById(R.id.post_image2);
-            Picasso.with(ctx).load(image).into(post_image2);
+        public void setContent(String content){
+            TextView post_content = (TextView)mView.findViewById(R.id.post_content);
+            post_content.setText(content);
         }
+
     }
 }

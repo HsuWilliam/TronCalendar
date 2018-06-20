@@ -2,16 +2,14 @@ package com.example.user.troncalendar;
 
 public class activitylist3 {
     String title;
-    String club;
+    String content;
     String time;
-    String image;
 
 
-    public activitylist3(String title, String club, String time,String image) {
+    public activitylist3(String title, String content, String time) {
         this.title = title;
-        this.club = club;
+        this.content = content;
         this.time = time;
-        this.image = image;
     }
 
     public String getTitle() {
@@ -22,20 +20,14 @@ public class activitylist3 {
         this.title = title;
     }
 
-    public String getClub() {
-        return club;
+    public String getContent() {
+        return content;
     }
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
 
-    public void setClub(String club) {
-        this.club = club;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getTime() {
