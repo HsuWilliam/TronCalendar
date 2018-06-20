@@ -54,4 +54,5 @@
 
     //increase_activity
     <string name="activitytime">活動時間</string>
+    <string name="activityplace">發佈區域</string>
 </resources>
