@@ -8,5 +8,6 @@
     <string name="nav_calendar">calendar</string>
     <string name="nav_profile">profile</string>
     <string name="homework1">作業</string>
+    <string name="course2Title">課程</string>
 
 </resources>

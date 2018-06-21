@@ -12,6 +12,7 @@
     <color name="brown">#996633</color> //activity
     <color name="purple">#8600b3</color> //profile
     <color name="pink">#ff338a</color> //calendar
+    <color name="greyWhite"> #f8f9f9 </color>
 
 
 </resources>
